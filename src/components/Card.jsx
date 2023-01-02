@@ -8,7 +8,7 @@ const Card = () => {
     const [username, setUsername] = useState('');
     const [newUsername, setNewUsername] = useState('');
     const added =  Boolean(name)&&Boolean(username)
-    console.log(!added)
+
     return (
         <>
             <div className='container-fluid'>
