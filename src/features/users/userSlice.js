@@ -5,7 +5,7 @@ const userSlice = createSlice({
     initialState: { value: usersData },
     reducers: {
         addUser: (state, action) => {
-            state.value.push(action.payload)
+            state.value.unshift(action.payload)
         },
         deleteUser: (state, action) => {
             state.value = state.value.filter((user) => user.id !== action.payload.id)

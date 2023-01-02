@@ -7,6 +7,8 @@ const Card = () => {
     const [name, setName] = useState('');
     const [username, setUsername] = useState('');
     const [newUsername, setNewUsername] = useState('');
+    const added =  Boolean(name)&&Boolean(username)
+    console.log(!added)
     return (
         <>
             <div className='container-fluid'>
@@ -18,7 +20,7 @@ const Card = () => {
                          <input className='form-control my-2' type='text' placeholder='user name..' onChange={(event) => { setUsername(event.target.value) }} />
                     </div>
                     <div className='col-lg-2 my-2'>
-                        <button className='btn btn-primary' onClick={() => { dispatch(addUser({ id: users[users.length - 1].id + 1, name, username })) }}>add user</button>
+                        <button disabled={!added} className='btn btn-primary' onClick={() => { dispatch(addUser({ id: users[users.length - 1].id + 1, name, username })) }}>add user</button>
                     </div>
 
                 </div>
