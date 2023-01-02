@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { nanoid } from '@reduxjs/toolkit'
 import { useSelector, useDispatch } from 'react-redux'
 import { addUser, deleteUser, updateUsername } from '../features/users/userSlice'
 const Card = () => {
@@ -20,7 +21,7 @@ const Card = () => {
                          <input className='form-control my-2' type='text' placeholder='user name..' onChange={(event) => { setUsername(event.target.value) }} />
                     </div>
                     <div className='col-lg-2 my-2'>
-                        <button disabled={!added} className='btn btn-primary' onClick={() => { dispatch(addUser({ id: users[users.length - 1].id + 1, name, username })) }}>add user</button>
+                        <button disabled={!added} className='btn btn-primary' onClick={() => { dispatch(addUser({ id: nanoid(), name, username })) }}>add user</button>
                     </div>
 
                 </div>
