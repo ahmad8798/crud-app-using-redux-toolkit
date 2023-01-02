@@ -24,7 +24,7 @@ const Card = () => {
                 </div>
                 {users.map(user => {
                     return (
-                        <div>
+                        <div key={user.id}>
                             <div className='row justify-content-center my-5'>
                                 <div className='col-lg-6 my-card border rounded'>
                                     <p className='fs-5'><strong>{user.name}</strong></p>

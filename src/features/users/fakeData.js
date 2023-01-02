@@ -1,6 +1,6 @@
 export const usersData = [
-    {id:1,name:'ahmad',username:'ahmad117'},
-    {id:8,name:'amulya',username:'amulya2001'},
+    {id:0,name:'ahmad',username:'ahmad117'},
+    {id:1,name:'amulya',username:'amulya2001'},
     {id:2,name:'pasha',username:'pasha117'},
     {id:3,name:'bablu',username:'bablu98'},
     {id:4,name:'shoaib',username:'shoaiba rshath'},
